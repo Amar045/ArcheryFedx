@@ -9,9 +9,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>Archery</title>
 
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
     <!-- Google Font: Source Sans Pro -->
-<!--    <link rel="stylesheet"-->
-<!--          href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback"/>-->
+    <link rel="stylesheet" type="text/css"
+          href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic"/>
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
@@ -113,45 +114,46 @@
                 </h:form>
                 <h:form id="frmReg">
                     <div class="col-md-12">
-                    <div class="card card-primary">
-                        <div class="card-header">
-                            <h3 class="card-title">General</h3>
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <div class="pull-left">
+                                    <a data-toggle="collapse" href="#collapse1">Мэдээлэх хуудас бүртгэх /МА-ЖУ7-3/</a>
+                                </div>
+                                <div class="pull-right">
+                                    <h:outputLabel styleClass="text-left "
+                                                   value="Огноо: "/>
+                                    <p:spacer width="20px"/>
+                                    <h:outputText value="2021-06-05">
+                                        <f:convertDateTime pattern="yyyy-MM-dd"/>
+                                    </h:outputText>
+                                </div>
+                                <div class="clearfix">
+                                </div>
+                            </div>
+                            <div id="collapse1" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col-lg-9">
+                                                end panel baina
+                                            </div>
+                                        </div>
+                                    </div>
 
-                            <div class="card-tools">
-                                <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-                                    <i class="fas fa-minus"></i>
-                                </button>
+                                    <div class="widget-foot">
+                                        <!-- Footer goes here -->
+                                        <div style="text-align: center">
+                                            <p:commandButton styleClass="btn btn-primary btn-sm" ajax="false"
+                                                             action="#" value="Хадгалах"/>
+                                            <p:spacer width="2"/>
+                                            <p:commandButton styleClass="btn btn-danger btn-sm" ajax="false"
+                                                             update="regInformFrm"
+                                                             value="Цуцлах"/>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="card-body">
-                            <div class="form-group">
-                                <label for="inputName">Project Name</label>
-                                <input type="text" id="inputName" class="form-control"/>
-                            </div>
-                            <div class="form-group">
-                                <label for="inputDescription">Project Description</label>
-                                <textarea id="inputDescription" class="form-control" rows="4"></textarea>
-                            </div>
-                            <div class="form-group">
-                                <label for="inputStatus">Status</label>
-                                <select id="inputStatus" class="form-control custom-select">
-                                    <option>Select one</option>
-                                    <option>On Hold</option>
-                                    <option>Canceled</option>
-                                    <option>Success</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <label for="inputClientCompany">Client Company</label>
-                                <input type="text" id="inputClientCompany" class="form-control"/>
-                            </div>
-                            <div class="form-group">
-                                <label for="inputProjectLeader">Project Leader</label>
-                                <input type="text" id="inputProjectLeader" class="form-control"/>
-                            </div>
-                        </div>
-                        <!-- /.card-body -->
-                    </div>
                     </div>
                     <!-- /.card -->
                 </h:form>
